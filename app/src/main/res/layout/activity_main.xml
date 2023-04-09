@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/earth">
+
+
+    <TextView
+        android:id="@+id/textOut"
+        android:layout_width="380dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:textColor="#9E590E"
+        android:textSize="27sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOut">
+
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#156858"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="ПАУЗА" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#156858"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="СТОП" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="391dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="250dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="106dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#65186A"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="НАЗАД" />
+
+        <Button
+            android:id="@+id/btnResume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#65186A"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="ВОСПРОИЗВЕСТИ" />
+
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="112dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#65186A"
+            android:onClick="onClick"
+            android:padding="14dp"
+            android:text="ВПЕРЁД" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switchLoop"
+        android:layout_width="144dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#8BC34A"
+        android:padding="14dp"
+        android:text="ПОВТОР"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnStream"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F49F05"
+            android:onClick="onClickSource"
+            android:text="Интернет"
+            android:textColor="#9E590E"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnRAW"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F49F05"
+            android:onClick="onClickSource"
+            android:text="Телефон"
+            android:textColor="#9E590E"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnSD"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F49F05"
+            android:onClick="onClickSource"
+            android:text="SD карта"
+            android:textColor="#9E590E"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
